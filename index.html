@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>বিবাহের শুভেচ্ছা ও ইসলামিক নসিহত</title>
+
+  <meta name="description" content="বিবাহের শুভেচ্ছা, ইসলামিক নসিহত ও দোয়া।">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --green: #174c3b;
+      --dark-green: #0d3328;
+      --gold: #c6a15b;
+      --cream: #fffaf0;
+      --paper: #fffdf8;
+      --text: #34423c;
+      --light-green: #edf5ef;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Noto Serif Bengali", serif;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(198,161,91,.10), transparent 25%),
+        radial-gradient(circle at 90% 20%, rgba(23,76,59,.08), transparent 25%),
+        var(--cream);
+      color: var(--text);
+      line-height: 1.9;
+    }
+
+    /* Decorative background */
+    body::before {
+      content: "✦  ❁  ✦  ❁  ✦";
+      position: fixed;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(198,161,91,.13);
+      font-size: 25px;
+      letter-spacing: 12px;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .container {
+      width: min(94%, 850px);
+      margin: auto;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 15px;
+    }
+
+    .hero-card {
+      width: 100%;
+      padding: 55px 25px;
+      background: rgba(255,255,255,.82);
+      border: 1px solid rgba(198,161,91,.35);
+      border-radius: 28px;
+      box-shadow: 0 20px 60px rgba(13,51,40,.10);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before,
+    .hero-card::after {
+      content: "❁";
+      position: absolute;
+      color: var(--gold);
+      opacity: .45;
+      font-size: 45px;
+    }
+
+    .hero-card::before {
+      top: 15px;
+      left: 20px;
+    }
+
+    .hero-card::after {
+      bottom: 15px;
+      right: 20px;
+    }
+
+    .bismillah {
+      font-family: "Amiri", serif;
+      font-size: clamp(30px, 7vw, 48px);
+      color: var(--green);
+      margin-bottom: 22px;
+      direction: rtl;
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 7vw, 46px);
+      line-height: 1.4;
+      color: var(--green);
+      margin-bottom: 15px;
+    }
+
+    .subtitle {
+      color: #8b7040;
+      font-size: 17px;
+    }
+
+    .ornament {
+      color: var(--gold);
+      letter-spacing: 8px;
+      margin: 25px 0;
+    }
+
+    .intro {
+      max-width: 650px;
+      margin: auto;
+      font-size: 17px;
+    }
+
+    /* Quote */
+    .quote {
+      margin: 25px auto 0;
+      max-width: 650px;
+      padding: 22px;
+      background: var(--light-green);
+      border-left: 4px solid var(--gold);
+      border-radius: 12px;
+      font-size: 16px;
+    }
+
+    /* Sections */
+    section {
+      padding: 30px 0;
+    }
+
+    .section-card {
+      background: var(--paper);
+      border-radius: 22px;
+      padding: 30px 28px;
+      margin-bottom: 22px;
+      border: 1px solid rgba(198,161,91,.20);
+      box-shadow: 0 10px 35px rgba(0,0,0,.055);
+      transition: .3s ease;
+    }
+
+    .section-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(23,76,59,.10);
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--green);
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+
+    .number {
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .ayah {
+      margin-top: 18px;
+      padding: 18px;
+      background: #faf5e9;
+      border-radius: 13px;
+      border-right: 4px solid var(--gold);
+    }
+
+    .ayah-text {
+      font-weight: 600;
+      color: var(--green);
+    }
+
+    .reference {
+      display: block;
+      margin-top: 5px;
+      color: #806c4a;
+      font-size: 14px;
+    }
+
+    .hadith {
+      margin-top: 15px;
+      padding: 17px;
+      background: #f0f6f1;
+      border-radius: 13px;
+    }
+
+    .hadith strong {
+      color: var(--green);
+    }
+
+    /* List */
+    .child-list {
+      margin-top: 12px;
+      padding: 15px 20px;
+      background: #fafaf5;
+      border-radius: 12px;
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    /* Dua */
+    .dua-card {
+      text-align: center;
+      padding: 40px 25px;
+      background:
+        linear-gradient(145deg, #123d30, #1c5945);
+      color: white;
+      border-radius: 25px;
+      margin: 25px 0;
+      box-shadow: 0 18px 50px rgba(13,51,40,.22);
+    }
+
+    .dua-arabic {
+      font-family: "Amiri", serif;
+      direction: rtl;
+      font-size: clamp(28px, 7vw, 42px);
+      line-height: 1.7;
+      color: #f4d894;
+      margin-bottom: 18px;
+    }
+
+    .dua-bangla {
+      font-size: 16px;
+      max-width: 650px;
+      margin: auto;
+      color: #f5f1e6;
+    }
+
+    /* Our prayer */
+    .prayer {
+      text-align: center;
+      padding: 35px 20px;
+      background: rgba(255,255,255,.8);
+      border-radius: 25px;
+      border: 1px solid rgba(198,161,91,.3);
+    }
+
+    .arabic-words {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 25px 0;
+    }
+
+    .word {
+      padding: 12px 18px;
+      border-radius: 50px;
+      background: #f4f0e5;
+      color: var(--green);
+      border: 1px solid rgba(198,161,91,.35);
+    }
+
+    .word span {
+      display: block;
+      font-family: "Amiri", serif;
+      font-size: 24px;
+      color: var(--gold);
+      direction: rtl;
+    }
+
+    .final-quote {
+      text-align: center;
+      font-size: clamp(19px, 4vw, 25px);
+      color: var(--green);
+      font-weight: 600;
+      padding: 45px 20px;
+      margin: 20px 0 50px;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark-green);
+      color: #e9e2d1;
+      text-align: center;
+      padding: 30px 15px;
+      font-size: 14px;
+    }
+
+    footer .gold {
+      color: #e1c477;
+    }
+
+    /* Top button */
+    .top-btn {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: none;
+      background: var(--green);
+      color: white;
+      cursor: pointer;
+      font-size: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.18);
+      opacity: 0;
+      visibility: hidden;
+      transition: .3s;
+    }
+
+    .top-btn.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Mobile */
+    @media(max-width:600px) {
+
+      .hero {
+        min-height: 88vh;
+        padding: 25px 8px;
+      }
+
+      .hero-card {
+        padding: 42px 18px;
+        border-radius: 22px;
+      }
+
+      .section-card {
+        padding: 24px 19px;
+        border-radius: 18px;
+      }
+
+      .section-title {
+        font-size: 19px;
+      }
+
+      .intro {
+        font-size: 15px;
+      }
+
+      .quote,
+      .ayah,
+      .hadith {
+        font-size: 14px;
+      }
+
+      .final-quote {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-card">
+
+      <div class="bismillah">
+        بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+      </div>
+
+      <div class="ornament">✦ ❁ ✦</div>
+
+      <h1>🌸 বিবাহের শুভেচ্ছা<br>ও ইসলামিক নসিহত</h1>
+
+      <p class="subtitle">
+        নতুন জীবনের পথে ভালোবাসা, দায়িত্ব ও তাকওয়ার সঙ্গে
+      </p>
+
+      <div class="ornament">❁</div>
+
+      <div class="intro">
+        প্রিয় বোন,<br><br>
+
+        তোমার জীবনের নতুন অধ্যায়ের শুরুতে রইল আন্তরিক
+        ভালোবাসা ও দোয়া। 🤍
+
+        <br><br>
+
+        আল্লাহ তোমাদের এই বিবাহকে বরকতময়, শান্তিময় ও
+        রহমতপূর্ণ করুন এবং একে অপরকে দ্বীনের পথে
+        সহযাত্রী হওয়ার তাওফিক দান করুন।
+      </div>
+
+      <div class="quote">
+        « “তিনি তোমাদের মধ্যে ভালোবাসা ও দয়া স্থাপন করেছেন।” »
+        <span class="reference">— সূরা আর-রূম: ২১</span>
+      </div>
+
+    </div>
+  </header>
+
+
+  <main class="container">
+
+    <!-- 01 -->
+    <section>
+      <div class="section-card">
+
+        <h2 class="section-title">
+          🌿 <span class="number">০১ —</span> বিয়েকে আমানত মনে করো
+        </h2>
+
+        <p>
+          বিয়ে শুধু একসঙ্গে বসবাসের নাম নয়; এটি দায়িত্ব,
+          আমানত ও অঙ্গীকার।
+          তোমাদের সম্পর্কের মূল লক্ষ্য হোক—
+          আল্লাহর সন্তুষ্টি অর্জন।
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- 02 -->
+    <section>
+      <div class="section-card">
+
+        <h2 class="section-title">
+          🤍 <span class="number">০২ —</span> ভালোবাসার সঙ্গে সম্মান
+        </h2>
+
+        <p>
+          একে অপরকে সম্মান করো। অপমান, গালাগালি,
+          অহংকার ও জুলুম থেকে দূরে থাকো।
+        </p>
+
+        <div class="ayah">
+          <div class="ayah-text">
+            « “তোমরা তাদের সঙ্গে সদ্ভাবে জীবনযাপন করো।” »
+          </div>
+          <span class="reference">
+            — সূরা আন-নিসা: ১৯
+          </span>
+        </div>
+
+        <div class="hadith">
+          <strong>রাসূলুল্লাহ ﷺ বলেছেন:</strong><br><br>
+
+          « “তোমাদের মধ্যে সর্বোত্তম সে, যে তার পরিবারের
+          কাছে সর্বোত্তম।” »
+
+          <span class="reference">
+            — জামে আত-তিরমিযি: ৩৮৯৫
+          </span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 03 -->
+    <section>
+      <div class="section-card">
+
+        <h2 class="section-title">
+          🕌 <span class="number">০৩ —</span> দ্বীনের পথে সহযাত্রী হও
+        </h2>
+
+        <p>
+          সংসারে এমন পরিবেশ তৈরি করো, যেখানে নামাজ,
+          কুরআন, যিকির ও ইসলামী জ্ঞানচর্চা স্বাভাবিক
+          বিষয় হয়ে ওঠে।
+        </p>
+
+        <div class="ayah">
+          <div class="ayah-text">
+            « “তোমরা নিজেদের এবং নিজেদের পরিবারকে আগুন
+            থেকে রক্ষা করো।” »
+          </div>
+
+          <span class="reference">
+            — সূরা আত-তাহরীম: ৬
+          </span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 04 -->
+    <section>
+      <div class="section-card">
+
+        <h2 class="section-title">
+          🌱 <span class="number">০৪ —</span> ভুল হলে ক্ষমা করো
+        </h2>
+
+        <p>
+          কেউই পরিপূর্ণ নয়। ভুল হলে রাগ না বাড়িয়ে
+          ক্ষমা, ধৈর্য ও সুন্দর আলোচনার মাধ্যমে
+          সমাধান খুঁজে নাও।
+        </p>
+
+        <div class="quote">
+          মনে রেখো:<br><br>
+
+          একটি সুন্দর সংসার মানে কখনো ঝগড়া না হওয়া নয়;
+          বরং ঝগড়ার পরও সম্পর্ককে সুন্দরভাবে ধরে রাখা।
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 05 -->
+    <section>
+      <div class="section-card">
+
+        <h2 class="section-title">
+          💰 <span class="number">০৫ —</span> হালাল রিজিক ও সরলতা
+        </h2>
+
+        <p>
+          সংসারের সুখ শুধু সম্পদের পরিমাণে নয়;
+          বরং হালাল রিজিক, অল্পে তুষ্টি ও বরকতে।
+        </p>
+
+        <div class="ayah">
+
+          <div class="ayah-text">
+            « “খাও ও পান করো, কিন্তু অপচয় করো না।” »
+          </div>
+
+          <span class="reference">
+            — সূরা আল-আ‘রাফ: ৩১
+          </span>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 06 -->
+    <section>
+      <div class="section-card">
+
+        <h2 class="section-title">
+          👶 <span class="number">০৬ —</span> সন্তানকে শুধু বড় নয়, মানুষ করো
+        </h2>
+
+        <p>
+          সন্তান আল্লাহর দেওয়া আমানত। তাদের শেখাও—
+        </p>
+
+        <div class="child-list">
+          নামাজ • কুরআন • সত্যবাদিতা • লজ্জাশীলতা •
+          উত্তম চরিত্র • দায়িত্ববোধ • মানুষের হক
+        </div>
+
+        <div class="hadith">
+
+          <strong>রাসূলুল্লাহ ﷺ বলেছেন:</strong><br><br>
+
+          « “তোমাদের প্রত্যেকেই দায়িত্বশীল এবং প্রত্যেককে
+          তার দায়িত্ব সম্পর্কে জিজ্ঞাসা করা হবে।” »
+
+          <span class="reference">
+            — সহিহ বুখারি: ২৫৫৪
+          </span>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 07 -->
+    <section>
+      <div class="section-card">
+
+        <h2 class="section-title">
+          🔐 <span class="number">০৭ —</span> গোপনীয়তা রক্ষা করো
+        </h2>
+
+        <p>
+          স্বামী-স্ত্রীর ব্যক্তিগত বিষয় বন্ধু, আত্মীয়
+          বা সামাজিক মাধ্যমে প্রকাশ করা থেকে বিরত থাকো।
+        </p>
+
+        <br>
+
+        <p>
+          সমস্যা হলে সবার কাছে নয়—প্রয়োজনে বিশ্বস্ত
+          ও বিচক্ষণ ব্যক্তির পরামর্শ নাও।
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- 08 -->
+    <section>
+      <div class="section-card">
+
+        <h2 class="section-title">
+          ⚖️ <span class="number">০৮ —</span> অধিকার ও দায়িত্ব
+        </h2>
+
+        <p>
+          শুধু নিজের অধিকার দাবি নয়—নিজের দায়িত্বও পালন করো।
+        </p>
+
+        <div class="quote">
+          ভালোবাসা মানে শুধু পাওয়া নয়;<br>
+          ভালোবাসা মানে দেওয়া, বোঝা ও পাশে থাকা।
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 09 -->
+    <section>
+      <div class="section-card">
+
+        <h2 class="section-title">
+          🌙 <span class="number">০৯ —</span> রাগের সময় আল্লাহকে স্মরণ করো
+        </h2>
+
+        <p>
+          মতের অমিল হতে পারে। কিন্তু তা যেন গালি,
+          অপমান, জুলুম বা হারাম আচরণে পরিণত না হয়।
+        </p>
+
+        <br>
+
+        <p>
+          রাগের সময় নিজেকে সংযত করো এবং শান্ত হওয়ার
+          পর কথা বলো।
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- DUA -->
+    <section>
+
+      <div class="dua-card">
+
+        <h2>🤲 একটি সুন্দর দোয়া</h2>
+
+        <div class="dua-arabic">
+          بارك الله لكما وبارك عليكما
+          وجمع بينكما في خير
+        </div>
+
+        <p class="dua-bangla">
+          “আল্লাহ তোমাদের উভয়ের জন্য বরকত দান করুন,
+          তোমাদের ওপর বরকত নাজিল করুন এবং কল্যাণের
+          মধ্যে তোমাদের একত্রিত রাখুন।”
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- OUR PRAYER -->
+    <section>
+
+      <div class="prayer">
+
+        <h2 class="section-title" style="justify-content:center;">
+          🌸 আমাদের দোয়া
+        </h2>
+
+        <p>
+          আল্লাহ তোমাদের দাম্পত্য জীবনকে—
+        </p>
+
+        <div class="arabic-words">
+
+          <div class="word">
+            <span>مَوَدَّة</span>
+            ভালোবাসা
+          </div>
+
+          <div class="word">
+            <span>رَحْمَة</span>
+            দয়া
+          </div>
+
+          <div class="word">
+            <span>سَكِينَة</span>
+            প্রশান্তি
+          </div>
+
+          <div class="word">
+            <span>تَقْوَى</span>
+            তাকওয়া
+          </div>
+
+        </div>
+
+        <p>
+          দিয়ে পূর্ণ করুন।
+        </p>
+
+        <br>
+
+        <p>
+          আল্লাহ তোমাদের একে অপরের জন্য শান্তির কারণ,
+          দ্বীনের পথে সহযাত্রী এবং জান্নাতের সঙ্গী বানিয়ে দিন।
+        </p>
+
+        <br>
+
+        <p>
+          নেক সন্তান দান করুন, তাদের সুন্দরভাবে মানুষ করার
+          তাওফিক দিন এবং তোমাদের পরিবারকে দুনিয়ায় শান্তির
+          ও আখিরাতে জান্নাতের পরিবার বানিয়ে দিন।
+        </p>
+
+        <br>
+
+        <strong style="color:var(--green);">
+          آمين يا رب العالمين 🤲
+        </strong>
+
+      </div>
+
+    </section>
+
+
+    <!-- FINAL -->
+    <div class="final-quote">
+
+      🌿<br><br>
+
+      “একসঙ্গে দুনিয়ার পথচলা হোক আল্লাহর সন্তুষ্টির জন্য,<br>
+
+      আর চূড়ান্ত ঠিকানা হোক—জান্নাত।”
+
+      <br><br>
+
+      🌿
+
+    </div>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="gold">
+      بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+    </div>
+
+    <br>
+
+    আল্লাহ তোমাদের দাম্পত্য জীবনকে বরকতময় করুন। 🤍
+
+    <br><br>
+
+    © 2026 • Islamic Wedding Greeting
+
+  </footer>
+
+
+  <!-- BACK TO TOP -->
+  <button class="top-btn" id="topBtn" onclick="goTop()">
+    ↑
+  </button>
+
+
+  <script>
+
+    const topBtn = document.getElementById("topBtn");
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 500) {
+        topBtn.classList.add("show");
+      } else {
+        topBtn.classList.remove("show");
+      }
+
+    });
+
+    function goTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+
+  </script>
+
+</body>
+        </html>
